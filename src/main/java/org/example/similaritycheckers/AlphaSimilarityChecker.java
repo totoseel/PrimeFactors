@@ -11,10 +11,18 @@ public class AlphaSimilarityChecker {
         Set<Character> setA = toUniqueChars(a);
         Set<Character> setB = toUniqueChars(b);
 
-        int sameCnt = intersection(setA, setB).size();
-        int totalCnt = union(setA, setB).size();
+        int sameCnt = sameCnt(setA, setB);
+        int totalCnt = totalCnt(setA, setB);
 
         return (int) ((double) sameCnt / totalCnt * MAX_SCORE);
+    }
+
+    private int sameCnt(Set<Character> setA, Set<Character> setB) {
+        return intersection(setA, setB).size();
+    }
+
+    private int totalCnt(Set<Character> setA, Set<Character> setB) {
+        return union(setA, setB).size();
     }
 
     private Set<Character> toUniqueChars(String s) {
