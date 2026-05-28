@@ -1,1 +1,1 @@
-Prime Factors
+TDD KATA 실습
