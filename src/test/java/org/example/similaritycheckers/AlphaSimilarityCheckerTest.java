@@ -18,4 +18,9 @@ class AlphaSimilarityCheckerTest {
     void identicalAlphabetSet_returns40() {
         assertThat(checker.calculate("ASD", "DSA")).isEqualTo(40);
     }
+
+    @Test
+    void noCommonAlphabets_returns0() {
+        assertThat(checker.calculate("A", "BB")).isEqualTo(0);
+    }
 }
