@@ -46,10 +46,4 @@ class PrimeFactorsTest {
         Assertions.assertEquals(0, primeFactors.calculate(0).size());
         Assertions.assertEquals(0, primeFactors.calculate(1).size());
     }
-
-    @Test
-    void testUnder100() {
-
-
-    }
 }
