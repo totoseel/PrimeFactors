@@ -10,6 +10,10 @@ public class LengthSimilarityChecker {
         if (isDoubleLengthOrMore(longer, shorter)) {
             return 0;
         }
+        return partialScore(longer, shorter);
+    }
+
+    private int partialScore(int longer, int shorter) {
         int gap = longer - shorter;
         return (int) ((1.0 - (double) gap / shorter) * MAX_SCORE);
     }
