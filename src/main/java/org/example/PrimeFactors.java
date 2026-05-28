@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrimeFactors {
-    public Integer[] calculate(int input){
+    public List<Integer> calculate(int input){
         List<Integer> l = new ArrayList<>();
+        if (input < 2) {
+            return l;
+        }
 
         if (input == 2){
             l.add(2);
@@ -16,6 +19,6 @@ public class PrimeFactors {
             l.add(2);
         }
 
-        return l.toArray(new Integer[0]);
+        return l;
     }
 }
