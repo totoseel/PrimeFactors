@@ -2,6 +2,9 @@ plugins {
     id 'java'
 }
 
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
 group = 'org.example'
 version = '1.0-SNAPSHOT'
 
@@ -14,6 +17,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testImplementation 'org.assertj:assertj-core:3.24.2'
+    testImplementation 'org.mockito:mockito-junit-jupiter:4.8.1'
 }
 
 test {
